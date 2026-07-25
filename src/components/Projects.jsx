@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
 import SectionTitle from "./ui/SectionTitle";
+import Reveal from "./ui/Reveal";
 import { PROJECTS } from "../data/content";
 import { C, fontDisplay, fontMono } from "../styles/theme";
 
@@ -10,9 +11,10 @@ export default function Projects() {
       <div className="max-w-5xl mx-auto">
         <SectionTitle eyebrow="Projects" title="Things I've built" />
         <div className="grid md:grid-cols-2 gap-6">
-          {PROJECTS.map((p) => (
-            <div
+          {PROJECTS.map((p, i) => (
+            <Reveal
               key={p.name}
+              delay={i * 100}
               className="card p-7 rounded-2xl"
               style={{ backgroundColor: C.panel, border: `1px solid ${C.panelBorder}` }}
             >
@@ -25,7 +27,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`${p.name} repo`}
-                  className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
+                  className="project-arrow w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{ border: `1px solid ${C.panelBorder}` }}
                 >
                   <ArrowUpRight size={16} color={C.text} />
@@ -39,7 +41,7 @@ export default function Projects() {
                 {p.stack.map((s) => (
                   <span
                     key={s}
-                    className="text-[11px] px-2.5 py-1 rounded-full"
+                    className="stack-chip text-[11px] px-2.5 py-1 rounded-full"
                     style={{ fontFamily: fontMono, backgroundColor: C.accentDim, color: C.accent }}
                   >
                     {s}
@@ -54,7 +56,7 @@ export default function Projects() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

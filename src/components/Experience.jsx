@@ -1,5 +1,6 @@
 import React from "react";
 import SectionTitle from "./ui/SectionTitle";
+import Reveal from "./ui/Reveal";
 import { EXPERIENCE } from "../data/content";
 import { C, fontDisplay, fontMono } from "../styles/theme";
 
@@ -14,8 +15,9 @@ export default function Experience() {
         <SectionTitle eyebrow="Experience" title="Where I've worked" />
         <div className="flex flex-col">
           {EXPERIENCE.map((e, i) => (
-            <div
+            <Reveal
               key={e.role}
+              delay={i * 90}
               className="tl-row grid md:grid-cols-[140px_20px_1fr] gap-4 md:gap-6 py-6"
               style={{ borderTop: i === 0 ? "none" : `1px solid ${C.panelBorder}` }}
             >
@@ -40,7 +42,7 @@ export default function Experience() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

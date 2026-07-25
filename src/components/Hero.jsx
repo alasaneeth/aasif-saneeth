@@ -8,7 +8,7 @@ export default function Hero({ onNavigate }) {
     <section id="top" className="pt-40 pb-24 px-6 md:px-8">
       <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_auto] gap-12 items-center">
         <div className="fade-up">
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-6" style={{ animation: "fadeUp 0.6s ease 0.05s both" }}>
             <span className="w-2 h-2 rounded-full pulse-dot" style={{ backgroundColor: "#34D399" }} />
             <span className="text-xs" style={{ fontFamily: fontMono, color: C.dim, letterSpacing: "0.08em" }}>
               {PROFILE.status}
@@ -17,26 +17,29 @@ export default function Hero({ onNavigate }) {
 
           <h1
             className="text-5xl sm:text-6xl md:text-7xl leading-[1.05]"
-            style={{ fontFamily: fontDisplay, fontWeight: 800, color: C.text }}
+            style={{ fontFamily: fontDisplay, fontWeight: 800, color: C.text, animation: "fadeUp 0.7s ease 0.12s both" }}
           >
             {PROFILE.name}
           </h1>
-          <p className="mt-5 text-lg md:text-xl max-w-xl" style={{ color: C.dim }}>
+          <p
+            className="mt-5 text-lg md:text-xl max-w-xl"
+            style={{ color: C.dim, animation: "fadeUp 0.7s ease 0.2s both" }}
+          >
             {PROFILE.role} {PROFILE.tagline}{" "}
             <span style={{ color: C.text }}>{PROFILE.taglineHighlight}</span>
           </p>
 
-          <div className="flex flex-wrap gap-3 mt-8">
+          <div className="flex flex-wrap gap-3 mt-8" style={{ animation: "fadeUp 0.7s ease 0.3s both" }}>
             <button
               onClick={() => onNavigate("projects")}
-              className="text-sm px-5 py-3 rounded-full"
+              className="btn-primary text-sm px-5 py-3 rounded-full"
               style={{ backgroundColor: C.accent, color: "#fff" }}
             >
               View Projects
             </button>
             <button
               onClick={() => onNavigate("contact")}
-              className="text-sm px-5 py-3 rounded-full"
+              className="btn-secondary text-sm px-5 py-3 rounded-full"
               style={{ border: `1px solid ${C.panelBorder}`, color: C.text }}
             >
               Get in touch
@@ -44,9 +47,9 @@ export default function Hero({ onNavigate }) {
           </div>
         </div>
 
-        <div className="fade-up flex justify-center md:justify-end">
+        <div className="fade-up flex justify-center md:justify-end" style={{ animationDelay: "0.15s" }}>
           <div
-            className="rounded-3xl overflow-hidden flex-shrink-0"
+            className="avatar-frame float rounded-3xl overflow-hidden flex-shrink-0"
             style={{
               width: 220,
               height: 264,

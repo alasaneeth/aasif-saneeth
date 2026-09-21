@@ -12,7 +12,7 @@ export default function Experience() {
       style={{ backgroundColor: C.panel, borderTop: `1px solid ${C.panelBorder}`, borderBottom: `1px solid ${C.panelBorder}` }}
     >
       <div className="max-w-5xl mx-auto">
-        <SectionTitle eyebrow="Experience" title="Where I've worked" />
+        <SectionTitle eyebrow="Experience" title="Professional experience" />
         <div className="flex flex-col">
           {EXPERIENCE.map((e, i) => (
             <Reveal
@@ -34,6 +34,7 @@ export default function Experience() {
                 <h3 className="text-lg md:text-xl" style={{ fontFamily: fontDisplay, fontWeight: 700, color: C.text }}>
                   {e.role} <span style={{ color: C.dim, fontWeight: 500 }}>· {e.org}</span>
                 </h3>
+                {e.meta && <div className="text-xs mt-1" style={{ color: C.faint }}>{e.meta}</div>}
                 <ul className="mt-3 flex flex-col gap-1.5">
                   {e.points.map((p, idx) => (
                     <li key={idx} className="text-sm" style={{ color: C.dim }}>

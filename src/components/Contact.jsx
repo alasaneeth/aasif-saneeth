@@ -15,7 +15,7 @@ export default function Contact() {
             className="text-4xl sm:text-5xl md:text-6xl max-w-xl"
             style={{ fontFamily: fontDisplay, fontWeight: 800, color: C.text }}
           >
-            Let's build something together.
+            Open to DevOps & Cloud roles.
           </h2>
         </Reveal>
 

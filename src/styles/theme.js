@@ -2,15 +2,15 @@
    DESIGN TOKENS — dark, minimal, one accent
 --------------------------------------------------------- */
 export const C = {
-  bg: "#0A0A0C",
-  panel: "#131317",
-  panelBorder: "#232329",
+  bg: "#0B1220",
+  panel: "#101A2E",
+  panelBorder: "#1F2E4A",
   text: "#F4F4F6",
-  dim: "#9797A3",
-  faint: "#5C5C66",
-  accent: "#6366F1",
-  accentDim: "rgba(99,102,241,0.14)",
-  accentSoft: "rgba(99,102,241,0.45)",
+  dim: "#A3B1C6",
+  faint: "#6F7F99",
+  accent: "#3AA0FF",
+  accentDim: "rgba(58,160,255,0.14)",
+  accentSoft: "rgba(58,160,255,0.45)",
 };
 
 export const fontDisplay = "'Sora', sans-serif";
@@ -66,7 +66,7 @@ export const globalStyles = `
 
   /* ---------- interactive hover ---------- */
   .card { transition: transform 0.35s cubic-bezier(0.16,0.84,0.44,1), border-color 0.35s ease, box-shadow 0.35s ease; }
-  .card:hover { border-color: ${C.accentSoft}; transform: translateY(-6px); box-shadow: 0 16px 40px -20px rgba(99,102,241,0.35); }
+  .card:hover { border-color: ${C.accentSoft}; transform: translateY(-6px); box-shadow: 0 16px 40px -20px rgba(58,160,255,0.35); }
 
   .project-arrow { transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), background-color 0.3s ease, border-color 0.3s ease; }
   .card:hover .project-arrow { transform: rotate(45deg) scale(1.08); background-color: ${C.accent}; border-color: ${C.accent}; }
@@ -97,7 +97,7 @@ export const globalStyles = `
   .skill-chip:hover { transform: translateY(-3px); border-color: ${C.accentSoft} !important; color: ${C.text} !important; background-color: ${C.accentDim}; }
 
   .edu-card { transition: transform 0.3s cubic-bezier(0.16,0.84,0.44,1), border-color 0.3s ease, box-shadow 0.3s ease; }
-  .edu-card:hover { transform: translateY(-4px); border-color: ${C.accentSoft}; box-shadow: 0 14px 34px -20px rgba(99,102,241,0.35); }
+  .edu-card:hover { transform: translateY(-4px); border-color: ${C.accentSoft}; box-shadow: 0 14px 34px -20px rgba(58,160,255,0.35); }
 
   .social-link { transition: transform 0.25s ease, color 0.25s ease; display: inline-flex; }
   .social-link:hover { transform: translateX(4px); color: ${C.accent} !important; }
@@ -113,4 +113,10 @@ export const globalStyles = `
   .logo-mark:hover { transform: rotate(-6deg) scale(1.08); }
 
   .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: ${C.accent}; z-index: 60; transition: width 0.1s linear; }
+
+  /* calm mode: no entrance, looping or hover-lift effects */
+  .reveal, .reveal-scale { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .fade-up, .mobile-menu { animation: none !important; }
+  .card:hover, .tl-row:hover, .edu-card:hover, .skill-chip:hover, .btn-primary:hover, .btn-secondary:hover, .social-link:hover { transform: none !important; }
+  .card:hover .project-arrow { transform: none !important; }
 `;

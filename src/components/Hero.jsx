@@ -8,8 +8,8 @@ export default function Hero({ onNavigate }) {
     <section id="top" className="pt-40 pb-24 px-6 md:px-8">
       <div className="max-w-5xl mx-auto grid md:grid-cols-[1fr_auto] gap-12 items-center">
         <div className="fade-up">
-          <div className="flex items-center gap-2 mb-6" style={{ animation: "fadeUp 0.6s ease 0.05s both" }}>
-            <span className="w-2 h-2 rounded-full pulse-dot" style={{ backgroundColor: "#34D399" }} />
+          <div className="flex items-center gap-2 mb-6" style={{  }}>
+            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "#34D399" }} />
             <span className="text-xs" style={{ fontFamily: fontMono, color: C.dim, letterSpacing: "0.08em" }}>
               {PROFILE.status}
             </span>
@@ -33,7 +33,7 @@ export default function Hero({ onNavigate }) {
             <button
               onClick={() => onNavigate("projects")}
               className="btn-primary text-sm px-5 py-3 rounded-full"
-              style={{ backgroundColor: C.accent, color: "#fff" }}
+              style={{ backgroundColor: C.accent, color: "#04121F" }}
             >
               View Projects
             </button>
@@ -49,7 +49,7 @@ export default function Hero({ onNavigate }) {
 
         <div className="fade-up flex justify-center md:justify-end" style={{ animationDelay: "0.15s" }}>
           <div
-            className="avatar-frame float rounded-3xl overflow-hidden flex-shrink-0"
+            className="avatar-frame rounded-3xl overflow-hidden flex-shrink-0"
             style={{
               width: 220,
               height: 264,

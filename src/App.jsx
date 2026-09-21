@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import { Expertise, Certifications, Education, Links } from "./components/Extras";
 import { C, fontBody, globalStyles } from "./styles/theme";
 
 export default function App() {
@@ -21,9 +22,13 @@ export default function App() {
       <Nav onNavigate={navigate} />
       <Hero onNavigate={navigate} />
       <About />
+      <Skills />
+      <Expertise />
       <Experience />
       <Projects />
-      <Skills />
+      <Certifications />
+      <Education />
+      <Links />
       <Contact />
     </div>
   );
